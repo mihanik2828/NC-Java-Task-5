@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&family=Roboto:ital@1&display=swap"
+          rel="stylesheet">
+</head>
+<body>
+<div class="intro"><h2>User data control</h2></div>
+<div class="aligncenter">
+    <h1>Adding</h1>
+    <p th:text="${lastAdded}">
+        <form th:action="@{/user}" th:object="${user}" method="POST">
+            <label>Name_________
+                <input type="text" th:field="*{name}"/>
+            </label>
+            <br>
+            <label>
+                Surname_______<input id="surname" type="text" th:field="*{surname}"/>
+            </label>
+            <br>
+            <label>
+                Second name___<input id="secondname" type="text" th:field="*{secondName}"/>
+            </label>
+            <br>
+            <label>
+                Age___________<input id="age" type="number" th:field="*{age}"/>
+            </label>
+            <br>
+            <label>
+                E-mail________<input id="email" type="text" th:field="*{email}"/>
+            </label>
+            <br>
+            <label>
+                Salary________<input id="salary" type="number" step="0.01" th:field="*{salary}"/>
+            </label>
+            <br>
+            <label>
+                Place of work_<input id="placeofwork" type="text" th:field="*{workPlacel}"/>
+            </label>
+            <br>
+    <p><input type="submit" value="Add user"/></p>
+    </form>
+
+    <h1>Searching</h1>
+    <form th:action="@{/byname}" th:object="${user}" method="POST">
+        <label>By name__________
+            <input type="text" th:field="*{name}"/>
+            <p><input type="submit" value="Search"/></p>
+        </label>
+    </form>
+    <br>
+
+    <form th:action="@{/bysurname}" th:object="${user}" method="POST">
+        <label>By surname_______
+            <input type="text" th:field="*{surname}"/>
+            <p><input type="submit" value="Search"/></p>
+        </label>
+    </form>
+    <p th:text="${searchResult}"></p>
+    <p th:text="${foundedUser}"></p>
+    <span th:text="${useragent}">Agent</span>
+
+<!--   <form th:action="@{/fileload}" method="POST">
+        <input type="file" th:field="${file}"/> <input type="submit" value="Load"/>
+    </form>-->
+</div>
+
+
+</body>
+</html>

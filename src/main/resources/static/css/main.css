@@ -1,0 +1,83 @@
+body{
+    margin: 0;
+    font-family: 'Inconsolata', monospace;
+   // background-attachment: #fff;
+    font-size:20px;
+    line-height:1.6;
+    color: #333;
+}
+
+/* Intro */
+.intro {
+    background: url("/image/hat.gif") center no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    margin: 0 auto;
+    height: 100px;
+    text-align: center	;
+}
+
+.aligncenter
+{
+    text-align: center;
+}
+
+/* Нечетные строки */
+#table .odd {
+    background: #AFEEEE;
+}
+
+/* Четные строки */
+#table .even {
+    background: #FFC0CB;
+}
+
+h2
+{
+    color: #fff;
+    font-family: 'Inconsolata', monospace;
+    font-size : 60px;
+
+    margin: 0;
+}
+
+/* Main  one*/
+.maincontent {
+    font-size: 20px;
+    text-align: left;
+    margin: auto 20%;
+}
+
+
+.urav {
+    margin: 0 auto;
+}
+
+
+input{
+    type: "number";
+    value: 0;
+}
+
+
+table {
+    text-align: center;
+    width : 400px;
+    border:2px solid black;
+    align: center;
+    margin: 10px auto;
+}
+th {
+    width: 150px;
+    max-width: 150px;
+    min-width: 150px;
+    border: 2px solid black;
+
+}
+td {
+    border: 1px solid black;
+}
+
+
+
